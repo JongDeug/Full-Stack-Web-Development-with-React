@@ -20,5 +20,8 @@
   "homepage": "https://github.com/JongDeug/Full-Stack-Web-Development-with-React#readme",
   "devDependencies": {
     "lite-server": "^2.6.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.0-beta1"
   }
 }
