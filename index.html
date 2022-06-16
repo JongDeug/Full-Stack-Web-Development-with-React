@@ -5,15 +5,158 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
-    
+
     <title>Ristorante Con Fusion</title>
 </head>
 
 <body>
+
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="#" class="navbar-brand mr-auto"><img src="/img/logo.png" alt="logo" height="30" width="41"></a>
+
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a href="#" class="nav-link active"><i class="bi bi-house-door"></i> Home</a>
+                    </li>
+                    <li class="nav-item"><a href="/assignment/aboutus.html" class="nav-link"><i
+                                class="bi bi-file-earmark-person"></i> About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-list"></i> Menu</a></li>
+                    <li class="nav-item"><a href="/contactus.html" class="nav-link"><i
+                                class="bi bi-caret-down-fill"></i> Contact</a></li>
+                </ul>
+                <span class="navbar-text ms-auto">
+                    <a href="" data-bs-toggle="modal" data-bs-target="#loginModal" class="text-decoration-none">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </a>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <form action="">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" placeholder="Enter email" class="form-control">
+                            </div>
+                            <div class="col">
+                                <input type="text" placeholder="Password" class="form-control">
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" id="modalCheckBox">
+                                <label for="modalCheckBox">Remember me</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="reserveModal" class="modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-titel">Reserve Modal</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row mb-3">
+                            <div class="col-lg-2 mb-2">
+                                <span>Number of Guests</span>
+                            </div>
+                            <div class="col">
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="inlineRadio1"
+                                        name="inlineRadioOptions" value="O">
+                                    <label for="inlineRadio" class="form-check-label">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="inlineRadio2"
+                                        name="inlineRadioOptions" value="O">
+                                    <label for="inlineRadio2" class="form-check-label">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="inlineRadio3"
+                                        name="inlineRadioOptions" value="O">
+                                    <label for="inlineRadio3" class="form-check-label">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="inlineRadio4"
+                                        name="inlineRadioOptions" value="O">
+                                    <label for="inlineRadio4" class="form-check-label">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="inlineRadio5"
+                                        name="inlineRadioOptions" value="O">
+                                    <label for="inlineRadio5" class="form-check-label">5</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="inlineRadio6"
+                                        name="inlineRadioOptions" value="O">
+                                    <label for="inlineRadio6" class="form-check-label">6</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-lg-2 mb-2">
+                                <span>Section</span>
+                            </div>
+                            <div class="col">
+                                <div class="btn-group">
+                                    <input type="radio" id="option1" class="btn-check" name="options" value="non">
+                                    <label for="option1" class="btn btn-outline-success">Non-Smoking</label>
+                                    <input type="radio" id="option2" class="btn-check" name="options" value="smoke"
+                                        checked>
+                                    <label for="option2" class="btn btn-outline-danger">Smoking</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="date" class="col-lg-2 mb-2">Date and Time</label>
+                            <div class="col-12 col-lg-4 mb-3">
+                                <input type="date" class="form-control" name="date" id="date" placeholder="Date">
+                            </div>
+                            <div class="col col-lg-4">
+                                <input type="time" class="form-control" name="time" placeholder="Time">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="offset-lg-2 col-md-10">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Reserve</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <header class="jumbotron">
         <div class="container">
@@ -23,50 +166,242 @@
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our
                         lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm">
+                <div class="col-12 col-sm-6 col-md-3 align-self-center mb-3">
+                    <img src="/img/logo.png" alt="logo" class="img-fulid">
                 </div>
+                <!-- tooltip -->
+                <!-- <button class="btn btn-warning btn-sm fw-bold col-12 col-sm col-md align-self-center ms-md-2"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    title="Or Call us at <br><strong>+852 12345678</strong>" data-bs-custom-class="custom-tooltip"
+                    data-bs-html="true" onclick="location.href='#reserveCard'">Reserve
+                    Table</button> -->
+
+                <!-- popover -->
+                <!-- <button type="button" class="btn btn-warning btn-sm col-12 col-sm col-md align-self-center ms-md-2"
+                    data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing"
+                    data-bs-placement="bottom" onclick="location.href='#reserveCard'">Reserve Table</button> -->
+
+                <!-- modal -->
+                <button class="btn btn-warning btn-sm fw-bold col-12 col-sm col-md align-self-center ms-md-2"
+                    data-bs-toggle="modal" data-bs-target="#reserveModal">
+                    Reserve Table
+                </button>
             </div>
         </div>
     </header>
 
     <div class="container">
-        <div class="row row-content algin-items-center">
+        <div class="row row-content">
+            <div class="col">
+                <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img src="/img/uthappizza.png" alt="uthappizza" class="d-block img-fluid">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>Uthappizza
+                                    <span class="badge bg-danger">HOT</span>
+                                    <span class="badge bg-secondary rounded-pill">$4.99</span>
+                                </h2>
+                                <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
+                                    Italian
+                                    pizza, topped with Cerignola
+                                    olives,
+                                    ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/img/alberto.png" alt="alberto" class="d-block img-fluid">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>Alberto Somayya</h2>
+                                <h4>Executive Chef</h4>
+                                <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide
+                                    International
+                                    experience having worked
+                                    closely
+                                    with
+                                    whos-who in the culinary world, he specializes in creating mouthwatering
+                                    Indo-Italian fusion
+                                    experiences. </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/img/buffet.png" alt="uthappizza" class="d-block img-fluid">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>Weekend Grand Buffet <span class="badge bg-danger">NEW</span></h2>
+                                <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of
+                                    five
+                                    different salads, six enticing
+                                    appetizers,
+                                    six main entrees and five choicest desserts. Free flowing bubbly and soft
+                                    drinks. All
+                                    for
+                                    just
+                                    $19.99 per person </p>vine cherry tomatoes, Vidalia onion, Guntur chillies and
+                                Buffalo Paneer.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#mycarousel" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#mycarousel" data-bs-slide-to="1"></li>
+                        <li data-bs-target="#mycarousel" data-bs-slide-to="2"></li>
+                    </ol>
+                    <a class="carousel-control-prev" href="#mycarousel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#mycarousel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                    <!-- <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <i class="bi bi-pause"></i>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <i class="bi bi-play"></i>
+                        </button>
+                    </div> -->
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <i class="bi bi-pause"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Our Lipsmacking Culinary Creations</h3>
+                <h3 class="col-8">Our Lipsmacking Culinary Creations</h3>
             </div>
             <div class="col col-sm order-sm-first col-md">
-                <h2>Uthappizza</h2>
-                <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives,
-                    ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                <!-- div에 align-items-center -->
+                <div class="d-flex align-items-center">
+                    <img src="/img/uthappizza.png" alt="uthappizza" class="img-thumbnail">
+                    <div class="ms-3">
+                        <h2>Uthappizza <span class="badge bg-danger">HOT</span> <span
+                                class="badge bg-secondary rounded-pill">$4.99</span></h2>
+                        <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian
+                            pizza, topped with Cerignola
+                            olives,
+                            ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
 
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-first col-md-3">
-                <h3>This Month's Promotions</h3>
+                <h3 class="col-8">This Month's Promotions</h3>
             </div>
             <div class="col col-sm order-sm-last col-md">
-                <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers,
-                    six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just
-                    $19.99 per person </p>
+                <div class="d-flex align-items-center">
+                    <!-- img에 align-self-center 해도 되는데 문구가 중앙으로 오지 않음 -->
+                    <img src="/img/buffet.png" alt="buffet" class="img-thumbnail order-last">
+                    <div class="me-3 order-first">
+                        <h2>Weekend Grand Buffet <span class="badge bg-danger">NEW</span></h2>
+                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five
+                            different salads, six enticing
+                            appetizers,
+                            six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All
+                            for
+                            just
+                            $19.99 per person </p>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Meet our Culinary Specialists</h3>
+                <h3 class="col-8">Meet our Culinary Specialists</h3>
             </div>
             <div class="col col-sm order-sm-first col-md">
-                <h2>Alberto Somayya</h2>
-                <h4>Executive Chef</h4>
-                <p>Award winning three-star Michelin chef with wide International experience having worked closely with
-                    whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion
-                    experiences. </p>
+                <div class="d-flex align-items-center">
+                    <img src="/img/alberto.png" alt="alberto" class="img-thumbnail">
+                    <div class="ms-3">
+                        <h2>Alberto Somayya</h2>
+                        <h4>Executive Chef</h4>
+                        <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International
+                            experience having worked
+                            closely
+                            with
+                            whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian
+                            fusion
+                            experiences. </p>
+                    </div>
+                </div>
             </div>
         </div>
+
+
+        <!-- <div class="row row-content justify-content-center">
+            <div class="col-12 col-sm-8">
+                <div class="card" id="reserveCard">
+                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col-lg-2 mb-2">
+                                    <span>Number of Guests</span>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="inlineRadio1"
+                                            name="inlineRadioOptions" value="O">
+                                        <label for="inlineRadio" class="form-check-label">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="inlineRadio2"
+                                            name="inlineRadioOptions" value="O">
+                                        <label for="inlineRadio2" class="form-check-label">2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="inlineRadio3"
+                                            name="inlineRadioOptions" value="O">
+                                        <label for="inlineRadio3" class="form-check-label">3</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="inlineRadio4"
+                                            name="inlineRadioOptions" value="O">
+                                        <label for="inlineRadio4" class="form-check-label">4</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="inlineRadio5"
+                                            name="inlineRadioOptions" value="O">
+                                        <label for="inlineRadio5" class="form-check-label">5</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="inlineRadio6"
+                                            name="inlineRadioOptions" value="O">
+                                        <label for="inlineRadio6" class="form-check-label">6</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="date" class="col-lg-2 mb-2">Date and Time</label>
+                                <div class="col-12 col-lg-4 mb-3">
+                                    <input type="text" class="form-control" name="date" id="date" placeholder="Date">
+                                </div>
+                                <div class="col col-lg-4">
+                                    <input type="text" class="form-control" name="time" placeholder="Time">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="offset-lg-2 col-md-10">
+                                    <button type="submit" class="btn btn-primary">Reserve</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> -->
     </div>
+    </div>
+
+
 
     <footer class="footer">
         <div class="container">
@@ -75,7 +410,7 @@
                     <h5>Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="assignment/aboutus.html">About</a></li>
                         <li><a href="#">Menu</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -86,19 +421,20 @@
                         121, Clear Water Bay Road<br>
                         Clear Water Bay, Kowloon<br>
                         HONG KONG<br>
-                        Tel.: +852 1234 5678<br>
-                        Fax: +852 8765 4321<br>
-                        Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
+                        <i class="bi bi-telephone-fill"></i>: +852 1234 5678<br>
+                        <i class="bi bi-valentine"></i>: +852 8765 4321<br>
+                        <i class="bi bi-envelope-fill"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
                     </address>
                 </div>
                 <div class="col-12 col-sm-4 align-self-center">
                     <div class="text-center">
-                        <a href="http://google.com/+">Google+</a>
-                        <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
-                        <a href="http://www.linkedin.com/in/">LinkedIn</a>
-                        <a href="http://twitter.com/">Twitter</a>
-                        <a href="http://youtube.com/">YouTube</a>
-                        <a href="mailto:">Mail</a>
+                        <a class="fs-2" href="http://google.com/+"><i class="bi bi-google"></i></a>
+                        <a class="fs-2" href="http://www.facebook.com/profile.php?id="><i
+                                class="bi bi-facebook"></i></a>
+                        <a class="fs-2" href="http://www.linkedin.com/in/"><i class="bi bi-linkedin"></i></a>
+                        <a class="fs-2" href="http://twitter.com/"><i class="bi bi-twitter"></i></a>
+                        <a class="fs-2" href="http://youtube.com/"><i class="bi bi-youtube"></i></a>
+                        <a class="fs-2" href="mailto:"><i class="bi bi-envelope-fill"></i></a>
                     </div>
                 </div>
             </div>
@@ -110,6 +446,85 @@
         </div>
     </footer>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        console.log(tooltipTriggerList);
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+
+    </script> -->
+
+    <script>
+        // jquery two button
+        // $(document).ready(function () {
+        //     $('#mycarousel').carousel({ interval: 100, pause: false});
+        //     $('#carousel-pause').click(function () {
+        //         $('#mycarousel').carousel('pause');
+        //     });
+        //     $('#carousel-play').click(function () {
+        //         $('#mycarousel').carousel('cycle');
+        //     });
+        // });
+
+        // jquery one button
+        // $(document).ready(function () {
+        //     $('#mycarousel').carousel({ interval: 100, pause: false });
+        //     $('#carouselButton').click(function () {
+        //         if ($('#carouselButton').children('i').hasClass('bi bi-pause')) {
+        //             $('#mycarousel').carousel('pause');
+        //             $('#carouselButton').children('i').removeClass('bi bi-pause');
+        //             $('#carouselButton').children('i').addClass('bi bi-play');
+        //         } else {
+        //             $('#mycarousel').carousel('cycle');
+        //             $('#carouselButton').children('i').removeClass('bi bi-play');
+        //             $('#carouselButton').children('i').addClass('bi bi-pause');
+        //         }
+        //     });
+        // });
+
+        // javascript two button
+        // const myCarouselElement = document.querySelector('#mycarousel')
+        // const carousel = new bootstrap.Carousel(myCarouselElement, {
+        //     interval: 100,
+        //     pause: false
+        // })
+
+        // const pause = document.querySelector('#carousel-pause');
+        // pause.addEventListener('click', function () {
+        //     carousel.pause();
+        // });
+        // const play = document.querySelector('#carousel-play');
+        // play.addEventListener('click', function () {
+        //     carousel.cycle();
+        // });
+
+        const myCarouselElement = document.querySelector('#mycarousel')
+        const carousel = new bootstrap.Carousel(myCarouselElement, {
+            interval: 100,
+            pause: false
+        })
+
+        const btn = document.querySelector('#carouselButton');
+        const btnIcon = document.querySelector('#carouselButton > i');
+        btn.addEventListener('click', function () {
+            // console.log(btnIcon.classList.contains('bi-pause', 'bi'));
+            if(btnIcon.classList.contains('bi-pause', 'bi')){
+                carousel.pause();
+                btnIcon.classList.replace('bi-pause', 'bi-play');
+                // btnIcon.classList.remove('bi', 'bi-pause');
+                // btnIcon.classList.add('bi', 'bi-play');
+            }
+            else{
+                carousel.cycle();
+                btnIcon.classList.replace('bi-play', 'bi-pause');
+                // btnIcon.classList.remove('bi', 'bi-play');
+                // btnIcon.classList.add('bi', 'bi-pause');
+            }
+        });
+    </script>
 </body>
 
 </html>
